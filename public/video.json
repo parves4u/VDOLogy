@@ -1,0 +1,86 @@
+[
+   {
+    "videoAditing":[
+      {
+        "video_id": "1",
+        "title": "The Beauty of Nature",
+        "description": "A breathtaking exploration of Earth's most stunning landscapes.",
+        "link": "https://www.youtube.com/watch?v=IjylLVD65Ig&t=2s",
+        "image": "../public/assets/images/custom/client-1.png",
+        "category":"full-form"
+      },
+      {
+        "video_id": "2",
+        "title": "Deep Space Wonders",
+        "description": "Dive into the mysteries of the universe with stunning visuals.",
+        "link": "https://youtu.be/q7AP_EJJc9E",
+        "image": "../public/assets/images/custom/client-2.png",
+        "category":"full-form"
+      },
+      {
+        "video_id": "3",
+        "title": "Ocean Life Uncovered",
+        "description": "Discover the secrets of the ocean and its amazing creatures.",
+        "link": "https://example.com/videos/ocean-life-uncovered",
+        "image": "https://example.com/images/ocean-life-thumbnail.jpg",
+        "category":"full-form"
+      }
+    ]
+   },
+    {
+      "video_id": "4",
+      "title": "History's Greatest Inventions",
+      "description": "Explore the inventions that changed the world forever.",
+      "link": "https://example.com/videos/history-inventions",
+      "image": "https://example.com/images/history-inventions-thumbnail.jpg",
+      "category":"full-form"
+    },
+    {
+      "video_id": "5",
+      "title": "Mountain Adventures",
+      "description": "Follow daring climbers on their thrilling mountain expeditions.",
+      "link": "https://example.com/videos/mountain-adventures",
+      "image": "https://example.com/images/mountain-adventures-thumbnail.jpg",
+      "category":"short-form"
+    },
+    {
+      "video_id": "6",
+      "title": "Wildlife in Action",
+      "description": "See incredible moments from the animal kingdom.",
+      "link": "https://example.com/videos/wildlife-action",
+      "image": "https://example.com/images/wildlife-thumbnail.jpg",
+      "category":"short-form"
+    },
+    {
+      "video_id": "7",
+      "title": "Cities of the Future",
+      "description": "A glimpse into the futuristic urban landscapes of tomorrow.",
+      "link": "https://example.com/videos/cities-future",
+      "image": "https://example.com/images/cities-future-thumbnail.jpg",
+      "category":"short-form"
+    },
+    {
+      "video_id": "8",
+      "title": "Cultural Wonders",
+      "description": "Journey through the world's most vibrant and unique cultures.",
+      "link": "https://example.com/videos/cultural-wonders",
+      "image": "https://example.com/images/cultural-wonders-thumbnail.jpg",
+      "category":"recent-work"
+    },
+    {
+      "video_id": "9",
+      "title": "The Art of Cooking",
+      "description": "Master chefs share their secrets to crafting culinary masterpieces.",
+      "link": "https://example.com/videos/art-of-cooking",
+      "image": "https://example.com/images/art-of-cooking-thumbnail.jpg",
+      "category":"recent-work"
+    },
+    {
+      "video_id": "10",
+      "title": "Technological Breakthroughs",
+      "description": "Learn about the innovations shaping the future of technology.",
+      "link": "https://example.com/videos/technological-breakthroughs",
+      "image": "https://example.com/images/technological-breakthroughs-thumbnail.jpg",
+      "category":"recent-work"
+    }
+  ]
