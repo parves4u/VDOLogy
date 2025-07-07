@@ -433,9 +433,9 @@ export default function FooterThree({ setCurrentCategory }) {
           </div>
         </div>
       </div>
-      <div className="absolute -right-[268px] top-[132px]">
+      {/* <div className="absolute -right-[268px] top-[132px]">
         <img src="./assets/images/home-two/footer-shape.png" alt="footer" />
-      </div>
+      </div> */}
       <div className="w-full h-[80px] md:h-[65px] border-t border-blue-sass/10">
         <div className="relative h-full mx-auto theme-container">
           <div className="flex justify-center w-full">

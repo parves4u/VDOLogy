@@ -15,16 +15,14 @@ export default function LandingHeaderTen({
   const toggleWorksSubMenu = () => {
     setIsWorksSubMenuOpen(!isWorksSubMenuOpen);
   };
-  const handleShortFormVideo = () =>{
-
-  }
+  const handleShortFormVideo = () => {};
 
   return (
-    <div className="fixed top-0 z-20 w-full h-24 bg-main-black">
-      <div className="px-[70px] w-full h-full">
+    <div className="fixed top-0 z-20 w-screen h-24 bg-main-black">
+      <div className="pl-0 pr-8 md:px-[70px] w-full h-full">
         <header className="relative flex items-center justify-between w-full h-full py-6 mx-auto">
           {/* Logo */}
-          <div className="flex items-center gap-24">
+          <div className="flex items-center gap-0 md:gap-24">
             <Link to="#banner">
               <img src="/assets/images/home-ten/logo.svg" alt="logo" />
             </Link>
@@ -72,7 +70,6 @@ export default function LandingHeaderTen({
                 </svg>
               </a>
 
-              
               <div className="absolute px-2 -left-7 h-0 group-hover:h-[480px] overflow-hidden top-5 transition-all duration-700">
                 <ul className="max-h-fit min-w-[200px] bg-white mt-8 transition-all duration-300 overflow-hidden px-5 top-20 pb-4 rounded-b-md">
                   <li className="relative py-1">
@@ -254,7 +251,7 @@ export default function LandingHeaderTen({
 
           {/* Mobile Navigation Menu */}
           <div
-            className={`fixed top-24 left-0 w-full h-screen bg-main-black transition-transform duration-300 ease-in-out ${
+            className={`fixed top-24 left-0 w-screen h-screen bg-main-black transition-transform duration-300 ease-in-out ${
               isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
             } xl:hidden`}
           >

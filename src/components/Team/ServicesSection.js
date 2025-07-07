@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 
 const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
-  
   // Categories
   const categories = [
     { name: "Video Editing", id: "videoEditing" },
@@ -549,7 +548,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: true,
       },
       {
-        title: "I will be your go-to short form video editor for brands, influencers, and creators",
+        title:
+          "I will be your go-to short form video editor for brands, influencers, and creators",
         description:
           "Cinematic short videos with custom captions, edits, and effects, perfect for building your brand across social platforms.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumnail-17.jpg",
@@ -558,7 +558,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will be your go-to short form video editor for brands, influencers, and creators",
+        title:
+          "I will be your go-to short form video editor for brands, influencers, and creators",
         description:
           "Cinematic short videos with custom captions, edits, and effects, perfect for building your brand across social platforms.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video1.jpg",
@@ -567,7 +568,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will turn your footage into viral short form content for TikTok, Reels, and Shorts",
+        title:
+          "I will turn your footage into viral short form content for TikTok, Reels, and Shorts",
         description:
           "Creative short form video editing with powerful hooks, captions, and trends to help you go viral.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video2.jpg",
@@ -585,7 +587,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Craft dynamic short form videos for TikTok, Instagram Reels, and YouTube Shorts",
+        title:
+          "Craft dynamic short form videos for TikTok, Instagram Reels, and YouTube Shorts",
         description:
           "High-energy edits, smooth transitions, and custom captions designed to grab attention and grow your online presence.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video4.jpg",
@@ -594,7 +597,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Create viral short form edits with captions for TikTok, Reels, and Shorts",
+        title:
+          "Create viral short form edits with captions for TikTok, Reels, and Shorts",
         description:
           "Professional short video editing designed for maximum engagement with dynamic captions, viral trends, and polished visuals.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video5.jpg",
@@ -603,7 +607,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Edit engaging short form content for TikTok, Reels, and YouTube Shorts",
+        title:
+          "Edit engaging short form content for TikTok, Reels, and YouTube Shorts",
         description:
           "Transform your fashion shoots into captivating short form reels with cinematic edits, stylish cuts, and eye-catching storytelling.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video6.jpg",
@@ -612,7 +617,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will edit your fashion videos into stunning cinematic reels and short films",
+        title:
+          "I will edit your fashion videos into stunning cinematic reels and short films",
         description:
           "Transform your fashion shoots into captivating short form reels with cinematic edits, stylish cuts, and eye-catching storytelling.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video7.jpg",
@@ -621,7 +627,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will be your expert short form video editor for TikTok, Reels, and Shorts",
+        title:
+          "I will be your expert short form video editor for TikTok, Reels, and Shorts",
         description:
           "Delivering scroll-stopping edits with captions, transitions, and trends to grow your audience across TikTok, YouTube, and Instagram.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video8.jpg",
@@ -630,7 +637,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will edit short form videos with custom captions and viral hooks",
+        title:
+          "I will edit short form videos with custom captions and viral hooks",
         description:
           "Boost your content with expertly edited short videos, including captions, effects, and optimized formats for Reels, Shorts, and TikTok.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video9.jpg",
@@ -639,7 +647,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will create high-impact short form videos for TikTok, Reels, and YouTube Shorts",
+        title:
+          "I will create high-impact short form videos for TikTok, Reels, and YouTube Shorts",
         description:
           "Professional short form video editing with custom captions, trendy cuts, and engaging visuals for TikTok, Instagram Reels, and YouTube Shorts.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video10.jpg",
@@ -683,10 +692,9 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         type: "short",
         isRecent: false,
       },
-      
     ],
-  
-    "Podcast": [
+
+    Podcast: [
       {
         title: "Interview Zoom Meeting Editing",
         description:
@@ -751,7 +759,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
     ],
-  
+
     "Audio Editing": [
       {
         title: "Audio Editing",
@@ -808,7 +816,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
     ],
-  
+
     "2D/3D Animation": [
       {
         title: "Highlights the agency’s brand while evoking wanderlust.",
@@ -839,8 +847,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
       },
       {
         title: "I've create for beveckchiwawa Promo Video",
-        description:
-          "Quick brand intro video for Beveck Chiwawa website.",
+        description: "Quick brand intro video for Beveck Chiwawa website.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumnail04.jpg",
         youtubeId: "pbZp_FxxBzg",
         type: "full",
@@ -1063,124 +1070,145 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
     ],
-  
+
     "Digital Marketing": [
       {
-          id: 1,
-          title: "ClickBoost Marketing",
-          description: "Grow your online reach with targeted ads and smart strategy.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing01.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 2,
-          title: "AdWise Digital",
-          description: "Affordable digital marketing for small businesses.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing02.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: false,
-        },
-        {
-          id: 3,
-          title: "RankRight SEO",
-          description: "Simple SEO solutions to help you rank higher and get found.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing03.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 1,
-          title: "SmartPixel Ads",
-          description: "Boost traffic with result-driven paid ad campaigns.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing04.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 2,
-          title: "InstaReach Marketing",
-          description: "Quick-start digital strategies for startups and solopreneurs.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing05.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: false,
-        },
-        {
-          id: 3,
-          title: "DigitalSpark Pro",
-          description: "Ignite your brand with smart, simple digital marketing.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing06.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-    ],
-  
-    "Web Development": [
-      
+        id: 1,
+        title: "ClickBoost Marketing",
+        description:
+          "Grow your online reach with targeted ads and smart strategy.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing01.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
       {
-          id: 1,
-          title: "EasyClient Manager",
-          description: "A professional and branded client portal that enhances trust and keeps customers updated in real-time.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-01.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 2,
-          title: "ProductShowcase Pro",
-          description: "A sleek, responsive website layout designed to highlight your product's features, benefits, and visuals.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-06.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: false,
-        },
-        {
-          id: 3,
-          title: "FeatureFocus Landing Page",
-          description: "Single-product landing page with scroll-based storytelling, interactive elements, and lead generation tools.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-02.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 1,
-          title: "EcoBrand Website",
-          description: "Tailored for eco-friendly or niche products, emphasizing storytelling, transparency, and user trust.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-03.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
-        {
-          id: 2,
-          title: "SellSphere Platform",
-          description: "Designed for scaling businesses, this site structure supports multiple products, categories, and integrated analytics.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-04.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: false,
-        },
-        {
-          id: 3,
-          title: "ServiceSphere Website",
-          description: "Ideal for service-based businesses with booking systems, service overviews, and a client inquiry portal.",
-          image: "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-05.jpg",
-          width: 1920,
-          height: 1154,
-          isRecent: true,
-        },
+        id: 2,
+        title: "AdWise Digital",
+        description: "Affordable digital marketing for small businesses.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing02.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: false,
+      },
+      {
+        id: 3,
+        title: "RankRight SEO",
+        description:
+          "Simple SEO solutions to help you rank higher and get found.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing03.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+      {
+        id: 1,
+        title: "SmartPixel Ads",
+        description: "Boost traffic with result-driven paid ad campaigns.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing04.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+      {
+        id: 2,
+        title: "InstaReach Marketing",
+        description:
+          "Quick-start digital strategies for startups and solopreneurs.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing05.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: false,
+      },
+      {
+        id: 3,
+        title: "DigitalSpark Pro",
+        description: "Ignite your brand with smart, simple digital marketing.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Digital-Marketing06.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+    ],
+
+    "Web Development": [
+      {
+        id: 1,
+        title: "EasyClient Manager",
+        description:
+          "A professional and branded client portal that enhances trust and keeps customers updated in real-time.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-01.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+      {
+        id: 2,
+        title: "ProductShowcase Pro",
+        description:
+          "A sleek, responsive website layout designed to highlight your product's features, benefits, and visuals.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-06.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: false,
+      },
+      {
+        id: 3,
+        title: "FeatureFocus Landing Page",
+        description:
+          "Single-product landing page with scroll-based storytelling, interactive elements, and lead generation tools.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-02.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+      {
+        id: 1,
+        title: "EcoBrand Website",
+        description:
+          "Tailored for eco-friendly or niche products, emphasizing storytelling, transparency, and user trust.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-03.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
+      {
+        id: 2,
+        title: "SellSphere Platform",
+        description:
+          "Designed for scaling businesses, this site structure supports multiple products, categories, and integrated analytics.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-04.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: false,
+      },
+      {
+        id: 3,
+        title: "ServiceSphere Website",
+        description:
+          "Ideal for service-based businesses with booking systems, service overviews, and a client inquiry portal.",
+        image:
+          "https://cdn.jsdelivr.net/gh/parves4u/images/Web-Development-05.jpg",
+        width: 1920,
+        height: 1154,
+        isRecent: true,
+      },
     ],
     "Short Form": [
       {
-        title: "I will be your go-to short form video editor for brands, influencers, and creators",
+        title:
+          "I will be your go-to short form video editor for brands, influencers, and creators",
         description:
           "Cinematic short videos with custom captions, edits, and effects, perfect for building your brand across social platforms.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumnail-17.jpg",
@@ -1189,7 +1217,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will be your go-to short form video editor for brands, influencers, and creators",
+        title:
+          "I will be your go-to short form video editor for brands, influencers, and creators",
         description:
           "Cinematic short videos with custom captions, edits, and effects, perfect for building your brand across social platforms.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video1.jpg",
@@ -1198,7 +1227,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will turn your footage into viral short form content for TikTok, Reels, and Shorts",
+        title:
+          "I will turn your footage into viral short form content for TikTok, Reels, and Shorts",
         description:
           "Creative short form video editing with powerful hooks, captions, and trends to help you go viral.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video2.jpg",
@@ -1216,7 +1246,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Craft dynamic short form videos for TikTok, Instagram Reels, and YouTube Shorts",
+        title:
+          "Craft dynamic short form videos for TikTok, Instagram Reels, and YouTube Shorts",
         description:
           "High-energy edits, smooth transitions, and custom captions designed to grab attention and grow your online presence.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video4.jpg",
@@ -1225,7 +1256,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Create viral short form edits with captions for TikTok, Reels, and Shorts",
+        title:
+          "Create viral short form edits with captions for TikTok, Reels, and Shorts",
         description:
           "Professional short video editing designed for maximum engagement with dynamic captions, viral trends, and polished visuals.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video5.jpg",
@@ -1234,7 +1266,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "Edit engaging short form content for TikTok, Reels, and YouTube Shorts",
+        title:
+          "Edit engaging short form content for TikTok, Reels, and YouTube Shorts",
         description:
           "Transform your fashion shoots into captivating short form reels with cinematic edits, stylish cuts, and eye-catching storytelling.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video6.jpg",
@@ -1243,7 +1276,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will edit your fashion videos into stunning cinematic reels and short films",
+        title:
+          "I will edit your fashion videos into stunning cinematic reels and short films",
         description:
           "Transform your fashion shoots into captivating short form reels with cinematic edits, stylish cuts, and eye-catching storytelling.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video7.jpg",
@@ -1252,7 +1286,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will be your expert short form video editor for TikTok, Reels, and Shorts",
+        title:
+          "I will be your expert short form video editor for TikTok, Reels, and Shorts",
         description:
           "Delivering scroll-stopping edits with captions, transitions, and trends to grow your audience across TikTok, YouTube, and Instagram.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video8.jpg",
@@ -1261,7 +1296,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will edit short form videos with custom captions and viral hooks",
+        title:
+          "I will edit short form videos with custom captions and viral hooks",
         description:
           "Boost your content with expertly edited short videos, including captions, effects, and optimized formats for Reels, Shorts, and TikTok.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video9.jpg",
@@ -1270,7 +1306,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         isRecent: false,
       },
       {
-        title: "I will create high-impact short form videos for TikTok, Reels, and YouTube Shorts",
+        title:
+          "I will create high-impact short form videos for TikTok, Reels, and YouTube Shorts",
         description:
           "Professional short form video editing with custom captions, trendy cuts, and engaging visuals for TikTok, Instagram Reels, and YouTube Shorts.",
         image: "https://cdn.jsdelivr.net/gh/parves4u/images/Shorts-Video10.jpg",
@@ -1278,7 +1315,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         type: "short",
         isRecent: false,
       },
-    ]
+    ],
   };
 
   // Navigation handlers
@@ -1301,8 +1338,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
   // Check if current category is Video Editing
   const isVideoEditing = currentCategoryName === "Video Editing";
   const isGraphicDesign = currentCategoryName === "Graphic Design";
-  const isDigitalMarketing = currentCategoryName === "Digital Marketing"
-  const isWebDevelopment = currentCategoryName === "Web Development"
+  const isDigitalMarketing = currentCategoryName === "Digital Marketing";
+  const isWebDevelopment = currentCategoryName === "Web Development";
 
   // Determine content based on category
   let currentContent = [];
@@ -1324,7 +1361,12 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
   }
 
   // Determine how many items to show initially
-  const initialItemsToShow = isGraphicDesign || isDigitalMarketing || isWebDevelopment ? 6 : videoType === "full" ? 4 : 6;
+  const initialItemsToShow =
+    isGraphicDesign || isDigitalMarketing || isWebDevelopment
+      ? 6
+      : videoType === "full"
+      ? 4
+      : 6;
   const visibleContent = showAll
     ? currentContent
     : currentContent.slice(0, initialItemsToShow);
@@ -1384,8 +1426,8 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
           className="md:w-[390px] md:h-[46px] md:border border-b-0 border-[#2d2d2d] rounded-tl-xl rounded-tr-xl flex justify-center items-center"
         >
           <span className=" text-caribbean-green font-bold boldText text-[32px] md:eading-[28px] capitalize">
-                    {currentCategoryName}
-                  </span>
+            {currentCategoryName}
+          </span>
         </h2>
 
         <button
@@ -1446,7 +1488,10 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
       {/* Content Grid */}
       <div
         className={`grid grid-cols-1 ${
-          isGraphicDesign || videoType === "short" || isDigitalMarketing || isWebDevelopment  
+          isGraphicDesign ||
+          videoType === "short" ||
+          isDigitalMarketing ||
+          isWebDevelopment
             ? "md:grid-cols-2 lg:grid-cols-3"
             : "lg:grid-cols-2"
         } lg:gap-4 md:grid-cols-1 gap-4 mt-8`}
@@ -1487,7 +1532,11 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
                   <button
                     onClick={() => handleItemClick(item)}
                     className="flex items-center justify-center bg-[#00DF8E] rounded-full p-3 hover:bg-opacity-80 transition transform scale-90 group-hover:scale-100 opacity-90 group-hover:opacity-100"
-                    aria-label={isGraphicDesign || isDigitalMarketing || isWebDevelopment ? "View design" : "Play video"}
+                    aria-label={
+                      isGraphicDesign || isDigitalMarketing || isWebDevelopment
+                        ? "View design"
+                        : "Play video"
+                    }
                   >
                     <Play size={24} className="text-white" />
                   </button>
@@ -1506,7 +1555,9 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
                     onClick={() => handleItemClick(item)}
                     className="text-[#00DF8E] font-semibold hover:text-opacity-80 inline-flex items-center"
                   >
-                    {isGraphicDesign || isDigitalMarketing || isWebDevelopment ? "View Design" : "Watch Now"}{" "}
+                    {isGraphicDesign || isDigitalMarketing || isWebDevelopment
+                      ? "View Design"
+                      : "Watch Now"}{" "}
                     <ChevronRight size={16} className="ml-1" />
                   </button>
                 </div>
