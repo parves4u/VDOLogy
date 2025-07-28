@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useState } from "react";
 import {
   Autoplay,
@@ -62,43 +60,43 @@ export default function ProjectSlider() {
   // Image data for standard and shorts formats
   const images = [
     // Standard Images (16:9 aspect ratio)
-    { 
-      type: "standard", 
-      src: "https://i.postimg.cc/8kRZDNwY/rec1.jpg", 
+    {
+      type: "standard",
+      src: "https://i.postimg.cc/8kRZDNwY/rec1.jpg",
       title: "Standard Image 1",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
-    { 
-      type: "standard", 
-      src: "https://i.postimg.cc/SRhV8vQV/rec2.jpg", 
+    {
+      type: "standard",
+      src: "https://i.postimg.cc/SRhV8vQV/rec2.jpg",
       title: "Standard Image 2",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
-    { 
-      type: "standard", 
-      src: "https://i.postimg.cc/nLN3VL6y/rec4.jpg", 
+    {
+      type: "standard",
+      src: "https://i.postimg.cc/nLN3VL6y/rec4.jpg",
       title: "Standard Image 3",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
 
     // Shorts Images (9:16 aspect ratio)
-    { 
-      type: "short", 
-      src: "https://i.postimg.cc/KjDf5DRb/rec3.png", 
+    {
+      type: "short",
+      src: "https://i.postimg.cc/KjDf5DRb/rec3.png",
       title: "Shorts Image 1",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
-    { 
-      type: "short", 
-      src: "https://i.postimg.cc/sXSwMrzv/rec6.png", 
+    {
+      type: "short",
+      src: "https://i.postimg.cc/sXSwMrzv/rec6.png",
       title: "Shorts Image 2",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
-    { 
-      type: "short", 
-      src: "https://i.postimg.cc/T3Y7CFV4/rec6.jpg", 
+    {
+      type: "short",
+      src: "https://i.postimg.cc/T3Y7CFV4/rec6.jpg",
       title: "Shorts Image 3",
-      videoUrl: "#" 
+      videoUrl: "#",
     },
   ];
 
@@ -173,18 +171,22 @@ export default function ProjectSlider() {
             >
               {images.map((image, index) => {
                 // Calculate width based on type
-                const width = image.type === "short"
-                  ? (9 / 14) * imageHeight // 9:16 aspect ratio for shorts
-                  : (9 / 9) * imageHeight; // 16:9 aspect ratio for standard images
+                const width =
+                  image.type === "short"
+                    ? (9 / 14) * imageHeight // 9:16 aspect ratio for shorts
+                    : (9 / 9) * imageHeight; // 16:9 aspect ratio for standard images
 
                 return (
-                  <SwiperSlide key={index} className="flex justify-center items-center">
+                  <SwiperSlide
+                    key={index}
+                    className="flex justify-center items-center"
+                  >
                     <div
                       className="bg-transparent relative rounded-[12px] overflow-hidden mx-auto"
                       style={{
                         width: `${width}px`,
                         height: `${imageHeight}px`,
-                        maxWidth: "100%"
+                        maxWidth: "100%",
                       }}
                     >
                       <div className="w-full h-full">
@@ -207,10 +209,7 @@ export default function ProjectSlider() {
                                   fill="none"
                                   xmlns="http://www.w3.org/2000/svg"
                                 >
-                                  <path
-                                    d="M8 5V19L19 12L8 5Z"
-                                    fill="black"
-                                  />
+                                  <path d="M8 5V19L19 12L8 5Z" fill="black" />
                                 </svg>
                               </button>
                             )}
@@ -231,7 +230,9 @@ export default function ProjectSlider() {
                     </div>
                     <div className="text-white text-center mt-4 px-2 max-w-xs mx-auto">
                       <p className="font-medium truncate">{image.title}</p>
-                      <span className="text-sm text-gray-400 capitalize">{image.type} format</span>
+                      <span className="text-sm text-gray-400 capitalize">
+                        {image.type} format
+                      </span>
                     </div>
                   </SwiperSlide>
                 );
@@ -244,6 +245,3 @@ export default function ProjectSlider() {
     </section>
   );
 }
-
-
-
