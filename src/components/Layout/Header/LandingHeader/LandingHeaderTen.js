@@ -15,6 +15,13 @@ export default function LandingHeaderTen({
   const toggleWorksSubMenu = () => {
     setIsWorksSubMenuOpen(!isWorksSubMenuOpen);
   };
+
+  // Function to close mobile menu when menu item is clicked
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setIsWorksSubMenuOpen(false); // Also close the works submenu
+  };
+
   const handleShortFormVideo = () => {};
 
   return (
@@ -257,12 +264,20 @@ export default function LandingHeaderTen({
           >
             <ul className="flex flex-col items-center gap-6 p-6 text-base font-medium text-white font-inter">
               <li>
-                <a href="#banner" className="home-two-nav-item">
+                <a
+                  href="#banner"
+                  className="home-two-nav-item"
+                  onClick={closeMobileMenu}
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#features" className="home-two-nav-item">
+                <a
+                  href="#features"
+                  className="home-two-nav-item"
+                  onClick={closeMobileMenu}
+                >
                   Features
                 </a>
               </li>
@@ -301,7 +316,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#videoEditing"
-                        onClick={() => setCurrentCategory(0)}
+                        onClick={() => {
+                          setCurrentCategory(0);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Video Editing
@@ -310,7 +328,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#podcast"
-                        onClick={() => setCurrentCategory(1)}
+                        onClick={() => {
+                          setCurrentCategory(1);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Podcast
@@ -319,7 +340,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#audioEditing"
-                        onClick={() => setCurrentCategory(2)}
+                        onClick={() => {
+                          setCurrentCategory(2);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Audio Editing
@@ -328,7 +352,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#2d3dAnimation"
-                        onClick={() => setCurrentCategory(3)}
+                        onClick={() => {
+                          setCurrentCategory(3);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         2D/3D Animation
@@ -337,7 +364,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#graphicDesign"
-                        onClick={() => setCurrentCategory(4)}
+                        onClick={() => {
+                          setCurrentCategory(4);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Graphic Design
@@ -345,8 +375,11 @@ export default function LandingHeaderTen({
                     </li>
                     <li className="py-1">
                       <a
-                        href="#webDevelopment"
-                        onClick={() => setCurrentCategory(5)}
+                        href="#digitalMarketing"
+                        onClick={() => {
+                          setCurrentCategory(5);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Digital Marketing
@@ -355,7 +388,10 @@ export default function LandingHeaderTen({
                     <li className="py-1">
                       <a
                         href="#webDevelopment"
-                        onClick={() => setCurrentCategory(6)}
+                        onClick={() => {
+                          setCurrentCategory(6);
+                          closeMobileMenu();
+                        }}
                         className="text-paragraph hover:text-purple"
                       >
                         Web Development
@@ -365,17 +401,29 @@ export default function LandingHeaderTen({
                 </div>
               </li>
               <li>
-                <a href="#about" className="home-two-nav-item">
+                <a
+                  href="#about"
+                  className="home-two-nav-item"
+                  onClick={closeMobileMenu}
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#RecentProjects" className="home-two-nav-item">
+                <a
+                  href="#RecentProjects"
+                  className="home-two-nav-item"
+                  onClick={closeMobileMenu}
+                >
                   Recent Projects
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="home-two-nav-item">
+                <a
+                  href="#pricing"
+                  className="home-two-nav-item"
+                  onClick={closeMobileMenu}
+                >
                   Pricing
                 </a>
               </li>
@@ -409,7 +457,7 @@ export default function LandingHeaderTen({
                   Call : +880 (1710) 618285
                 </span>
               </a>
-              <Link to="/contact">
+              <Link to="/contact" onClick={closeMobileMenu}>
                 <div className="home-two-btn-bg py-2.5 group bg-caribbean-green border-caribbean-green">
                   <span className="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-main-black font-inter">
                     Contact US
