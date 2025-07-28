@@ -149,21 +149,21 @@ const SliderSection: React.FC = () => {
     beforeChange: () => setActiveVideoId(null),
     responsive: [
       {
-        breakpoint: 768, // Mobile devices (adjust as needed)
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerMode: false, // Disable centerMode on mobile for better control
-          variableWidth: false, // Disable variableWidth to ensure single slide
-          centerPadding: "0px", // Remove padding to fit one slide
+          centerMode: false,
+          variableWidth: false,
+          centerPadding: "0px",
         },
       },
       {
-        breakpoint: 1024, // Tablets (optional, adjust as needed)
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           centerMode: true,
           variableWidth: true,
-          centerPadding: "20px", // Adjust padding for tablets
+          centerPadding: "20px",
         },
       },
     ],
@@ -190,16 +190,16 @@ const SliderSection: React.FC = () => {
       </div>
       <Slider {...settings} className="variable-width">
         {slides.map((slide) => (
-          <div className="px-2 h-80" key={slide.id}>
+          <div className="px-2 md:h-80" key={slide.id}>
             <div
-              className="relative slide-card h-full rounded-lg overflow-hidden mx-auto transition-all duration-500"
+              className="relative slide-card rounded-lg overflow-hidden mx-auto transition-all duration-500 md:h-full aspect-video"
               onClick={() => handleSlideClick(slide.id)}
             >
               <img
                 src={slide.src}
                 alt={slide.alt}
                 loading="lazy"
-                className={`rounded-lg size-full object-cover cursor-pointer ${
+                className={`rounded-lg w-full h-full object-contain cursor-pointer ${
                   activeVideoId === slide.id ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -207,8 +207,6 @@ const SliderSection: React.FC = () => {
                 <div className="absolute inset-0 rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full"
-                    width="560"
-                    height="315"
                     src={`${slide.video}?autoplay=1`}
                     title="YouTube video player"
                     loading="lazy"
