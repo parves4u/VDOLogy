@@ -1,11 +1,38 @@
 import React from "react";
-import ContactMap from "./ContactMap";
 import { Helmet } from "react-helmet";
 
 export default function ContactForm() {
   return (
-    
     <section className="py-16 md:py-[130px] bg-main-black">
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>Contact Us - VDOLogy</title>
+        <meta
+          name="description"
+          content="Get in touch with VDOLogy for top-notch video editing and design services."
+        />
+        <meta
+          name="keywords"
+          content="VDOLogy, Contact, Video Editing, Graphic Design, Support"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="VDOLogy Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.vdology.com/contact" />
+        {/* Hotjar Tracking Code for VDOLogy */}
+        <script>
+          {`
+            (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:3948571,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </script>
+      </Helmet>
       <div className="theme-container w-full mx-auto grid grid-cols-7 lg:grid-cols-12 gap-y-16 lg:gap-y-0 lg:gap-x-[70px]">
         {/* <!-- address start  --> */}
         <div className="col-span-7 lg:col-span-5">

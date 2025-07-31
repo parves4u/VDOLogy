@@ -413,7 +413,7 @@ export default function FooterThree({ setCurrentCategory }) {
           <h1 className="font-semibold text-white text-18">Address</h1>
           <div className="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white hover:underline transition-all duration-300 mt-3.5">
             <span className="transition-all duration-300">
-              Vision 2021 Tower, Dhaka, Bangladesh
+              Prachir View, H#36/7/B/1, Shah Ali Bag, Bangladesh
             </span>
           </div>
           <div className="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white hover:underline transition-all duration-300 mt-3.5">

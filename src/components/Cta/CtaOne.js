@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Parallax from "parallax-js";
-import { Link } from "react-router-dom";
 import lineAnimation from "../../lottie/left_lines.json";
 import Lottie from "lottie-react";
 
@@ -16,6 +15,7 @@ export default function CtaOne() {
       };
     }
   }, []);
+
   return (
     <section data-aos="fade-up" id="consultation" className="bg-main-black">
       <div className="relative w-full consultation-section-wrapper">
@@ -26,16 +26,21 @@ export default function CtaOne() {
             </div>
             <div className="md:w-[432px] w-full">
               <span className="mb-5 section-title-top-tag text-[#00DE8D]">
-              Need help in Video Editing?
+                Need help in Video Editing?
               </span>
               <h2 className="md:text-30 text-34 font-semibold text-main-black mb-[32px]">
-              Book 1:1 Free Consultation from the featured section
+                Book 1:1 Free Consultation from the featured section
               </h2>
               <p className="text-paragraph mb-[45px]">
                 We’ve 10+ years of experience in digital content creator.
               </p>
 
-              <Link href="/contact">
+              {/* Using <a> tag for external link */}
+              <a
+                href="https://calendar.app.google/y1Z2ppu95YrBjdvf7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="inline-flex py-3 home-two-btn-bg group bg-[#00DE8D] border-[#00DE8D]">
                   <span className="relative z-10 text-base text-white transition-all duration-300 group-hover:text-[#00DE8D] font-inter">
                     Get Consultation
@@ -58,7 +63,7 @@ export default function CtaOne() {
                     ></path>
                   </svg>
                 </div>
-              </Link>
+              </a>
             </div>
             <div className="flex-1">
               <div
