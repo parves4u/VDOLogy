@@ -7,6 +7,8 @@ import LandingTen from "./landing/LandingTen";
 import About from "./pages/About";
 import TermsAndPrivacy from "./pages/TermsAndPrivacy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { Helmet } from 'react-helmet';
+
 
 export default function App() {
   useEffect(() => {

@@ -1,8 +1,10 @@
 import React from "react";
 import ContactMap from "./ContactMap";
+import { Helmet } from "react-helmet";
 
 export default function ContactForm() {
   return (
+    
     <section className="py-16 md:py-[130px] bg-main-black">
       <div className="theme-container w-full mx-auto grid grid-cols-7 lg:grid-cols-12 gap-y-16 lg:gap-y-0 lg:gap-x-[70px]">
         {/* <!-- address start  --> */}

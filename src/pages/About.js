@@ -7,6 +7,7 @@ import AboutLogoCloud from "../components/ClientLogoSlider/AboutLogoCloud";
 import AboutTestimonial from "../components/Testimonials/AboutTestimonial";
 import AboutTeam from "../components/Team/AboutTeam";
 import InnerPageLayout from "../components/Layout/InnerPageLayout";
+import { Helmet } from 'react-helmet';
 
 export default function About() {
   return (
