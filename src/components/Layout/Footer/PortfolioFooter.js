@@ -424,7 +424,7 @@ export default function FooterThree({ setCurrentCategory }) {
           <h1 className="font-semibold text-white text-18">Contact</h1>
           <div className="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white hover:underline transition-all duration-300 mt-3.5">
             <span className="transition-all duration-300">
-              info@vdology.com
+              contact@vdology.com
               <br />
               +880 (1710) 618285
               <br />
@@ -447,8 +447,8 @@ export default function FooterThree({ setCurrentCategory }) {
           </div>
           <div className="flex flex-wrap items-center justify-between w-full h-full">
             <span className="text-dark-silver max-w-80">
-              2025 © All rights reserved by
-              <b className="text-main-black">VDOLogy</b>
+              2025 © All rights reserved by&nbsp; 
+              <b className="text-main-white">VDOLogy</b>
             </span>
             <div className="relative flex justify-center w-full sm:w-fit">
               <a

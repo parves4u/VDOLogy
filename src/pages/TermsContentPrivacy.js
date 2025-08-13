@@ -141,7 +141,7 @@ const TermsContentPrivacy = () => {
             <li>• Request deletion of your data (subject to legal or contractual obligations)</li>
             <li>• Withdraw consent (where applicable)</li>
           </ul>
-          To exercise any of these rights, please contact us at: info@vdology.com
+          To exercise any of these rights, please contact us at: contact@vdology.com
         </p>
 
         <h2 style={headingStyle}>7. Cookies and Tracking Technologies</h2>
@@ -174,7 +174,7 @@ const TermsContentPrivacy = () => {
           If you have any questions or concerns regarding this Privacy Policy or how your data is handled, please contact us at:
           <ul>
             <li>VDOLogy</li>
-            <li>Email: info@vdology.com</li>
+            <li>Email: contact@vdology.com</li>
             <li>Location: Dhaka, Bangladesh</li>
           </ul>
         </p>

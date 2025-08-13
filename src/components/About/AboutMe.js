@@ -85,7 +85,7 @@ export default function AboutMe() {
                       <h1 className="font-semibold text-18 text-caribbean-green">
                         Contact
                       </h1>
-                      <p className="font-medium text-white">info@vdology.com</p>
+                      <p className="font-medium text-white">contact@vdology.com</p>
                       <p className="font-medium text-white">+880 1710 618285</p>
                     </div>
                   </div>
