@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 export default function FooterOne() {
   return (
     <footer>
@@ -15,17 +16,18 @@ export default function FooterOne() {
                 />
               </div>
               <ul className="flex flex-wrap gap-5 md:gap-14 md:items-center">
+                {/* ✅ ফিক্স: <a> ট্যাগে 'to' এর বদলে 'href' ব্যবহার করা হয়েছে */}
                 <li className="font-semibold text-18 hover:text-purple hover:underline common-transition text-paragraph">
-                  <a to="#">Facebook</a>
+                  <a href="#">Facebook</a>
                 </li>
                 <li className="font-semibold text-18 hover:text-purple hover:underline common-transition text-paragraph">
-                  <a to="#">Twitter</a>
+                  <a href="#">Twitter</a>
                 </li>
                 <li className="font-semibold text-18 hover:text-purple hover:underline common-transition text-paragraph">
-                  <a to="#">Instagram</a>
+                  <a href="#">Instagram</a>
                 </li>
                 <li className="font-semibold text-18 hover:text-purple hover:underline common-transition text-paragraph">
-                  <a to="#">LinkedIn</a>
+                  <a href="#">LinkedIn</a>
                 </li>
               </ul>
             </div>
@@ -138,7 +140,8 @@ export default function FooterOne() {
                     />
                   </div>
 
-                  <a to="#">
+                  {/* ✅ ফিক্স: এখানেও <a> ট্যাগে 'to' এর বদলে 'href' ব্যবহার করা হয়েছে */}
+                  <a href="#">
                     <div className="inline-flex py-3 home-two-btn-bg group bg-[#00DE8D] border-[#00DE8D]">
                       <span className="relative z-10 text-base text-white transition-all duration-300 group-hover:text-[#00DE8D] font-inter">
                         Subscribe

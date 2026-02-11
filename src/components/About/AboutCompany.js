@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Play, X, CheckCircle2, Users, Trophy, Clock, ArrowRight } from "lucide-react";
+// ArrowRight সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহার করা হয়নি
+import { Play, X, CheckCircle2, Users, Trophy, Clock } from "lucide-react";
 
-// ✅ পাথ (Path) ঠিক আছে (components/Layout ফোল্ডারে ফাইল খুঁজবে)
+// ✅ পাথ (Path) ঠিক আছে
 import PageLayout from "../Layout/PageLayout";
 import LandingHeaderTen from "../Layout/Header/LandingHeader/LandingHeaderTen";
 

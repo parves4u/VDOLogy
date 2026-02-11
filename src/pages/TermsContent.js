@@ -17,36 +17,17 @@ const TermsContent = () => {
     fontSize: '1.75rem',
     fontWeight: 'bold',
     marginBottom: '1.5rem',
-    color: '#E5E7EB', // Use the button color for headings to create consistency
+    color: '#E5E7EB',
   };
 
   const textStyle = {
     fontSize: '1rem',
     lineHeight: '1.6',
     marginBottom: '2rem',
-    color: '#E5E7EB', // Slightly lighter color for better readability
+    color: '#E5E7EB',
   };
 
-  const buttonStyle = {
-    backgroundColor: '#00DE8D',
-    color: '#101828',
-    padding: '0.75rem 1.5rem',
-    borderRadius: '6px',
-    border: 'none',
-    cursor: 'pointer',
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    transition: 'background-color 0.3s ease, transform 0.2s ease',
-    display: 'block', // Make the button a block element for better clickability
-    width: '100%',
-    maxWidth: '200px',
-    margin: '0 auto', // Center the button
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: '#00C07D', // Slightly darker shade for hover
-    transform: 'scale(1.05)', // Slight scale effect on hover
-  };
+  // ❌ ফিক্স: 'buttonStyle' এবং 'buttonHoverStyle' মুছে ফেলা হয়েছে কারণ এগুলো ব্যবহার করা হয়নি।
 
   return (
     <div>
@@ -79,46 +60,46 @@ const TermsContent = () => {
         </p>
 
         <h2 style={headingStyle}>2. Client Obligations</h2>
-        <p style={textStyle}>
+        <div style={textStyle}>
           <ul>
             <li>• Clients must provide clear project briefs, necessary assets, and relevant information in a timely manner.</li>
             <li>• Clients must ensure they hold the rights to all content provided to VDOLogy.</li>
             <li>• Delays in asset delivery may lead to extended deadlines or rescheduling.</li>
           </ul>
-        </p>
+        </div>
 
         <h2 style={headingStyle}>3. Payment Terms</h2>
-        <p style={textStyle}>
+        <div style={textStyle}>
           <ul>
             <li>• Payment terms will be outlined in the project agreement or invoice.</li>
             <li>• Services may be billed upfront, per milestone, or on a recurring basis depending on the agreement.</li>
             <li>• All fees are non-refundable once work has begun, unless otherwise stated.</li>
           </ul>
-        </p>
+        </div>
 
         <h2 style={headingStyle}>4. Intellectual Property</h2>
-        <p style={textStyle}>
+        <div style={textStyle}>
           <ul>
             <li>• VDOLogy retains the right to use generic, non-client-specific parts of designs or edits (templates, animations) for future projects.</li>
             <li>• Final project deliverables become the property of the client upon full payment, unless otherwise agreed in writing.</li>
           </ul>
-        </p>
+        </div>
 
         <h2 style={headingStyle}>5. Revisions and Feedback</h2>
-        <p style={textStyle}>
+        <div style={textStyle}>
           <ul>
             <li>• Each service package includes a set number of revisions. Additional revisions may incur extra charges.</li>
             <li>• Feedback should be provided in a timely manner to avoid delays.</li>
           </ul>
-        </p>
+        </div>
 
         <h2 style={headingStyle}>6. Limitation of Liability</h2>
-        <p style={textStyle}>
+        <div style={textStyle}>
           <ul>
             <li>• VDOLogy shall not be held liable for any loss or damages resulting from project delays, data loss, or service interruptions.</li>
             <li>• We are not responsible for third-party service failures or legal issues related to client-provided content.</li>
           </ul>
-        </p>
+        </div>
 
         <h2 style={headingStyle}>7. Confidentiality</h2>
         <p style={textStyle}>
@@ -135,19 +116,7 @@ const TermsContent = () => {
           These Terms shall be governed by the laws of Dhaka, Bangladesh. International clients agree to settle disputes under Bangladesh’s legal framework.
         </p>
 
-        {/* <button
-          style={buttonStyle}
-          onMouseEnter={(e) => {
-            e.target.style.backgroundColor = buttonHoverStyle.backgroundColor;
-            e.target.style.transform = buttonHoverStyle.transform;
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.backgroundColor = buttonStyle.backgroundColor;
-            e.target.style.transform = 'scale(1)';
-          }}
-        >
-          Accept
-        </button> */}
+        {/* বাটনটি কমেন্ট করা আছে, তাই এর স্টাইল দরকার নেই */}
       </div>
     </div>
   );

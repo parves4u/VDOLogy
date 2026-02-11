@@ -108,6 +108,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
     } else {
         setVisibleCount(4); // ফুল ফর্মে ৪টি
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentCategory, isShortFormCategory, videoType]);
 
   // Load Content
@@ -136,7 +137,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
   const handlePrev = () => setCurrentCategory(prev => prev === 0 ? categories.length - 1 : prev - 1);
   const handleNext = () => setCurrentCategory(prev => prev === categories.length - 1 ? 0 : prev + 1);
   
-  // ✅ FIX: View More বাটন লজিক (শর্ট ফর্ম হলে ৩টি করে বাড়বে, ফুল হলে ২টি)
+  // ✅ FIX: View More বাটন লজিক (শর্ট ফর্ম হলে ৩টি করে বাড়বে, ফুল হলে ২টি)
   const handleViewMore = () => {
     const increment = (isShortFormCategory || videoType === 'short' || isGraphicDesign) ? 3 : 2;
     setVisibleCount(prev => prev + increment); 

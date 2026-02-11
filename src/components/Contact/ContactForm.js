@@ -1,12 +1,13 @@
 import React, { useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import emailjs from '@emailjs/browser';
+// ✅ সমাধান: 'Phone' ইমপোর্টটি সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহার করা হয়নি
 import { 
-  MapPin, Mail, Phone, Facebook, Twitter, Instagram, 
+  MapPin, Mail, Facebook, Twitter, Instagram, 
   Send, Loader2, CheckCircle, MessageSquare 
 } from "lucide-react";
 
-// ✅ লেআউট এবং হেডার ইম্পোর্ট (পাথ ঠিক করা হয়েছে)
+// ✅ লেআউট এবং হেডার ইম্পোর্ট (পাথ ঠিক আছে)
 import PageLayout from "../Layout/PageLayout";
 import LandingHeaderTen from "../Layout/Header/LandingHeader/LandingHeaderTen";
 

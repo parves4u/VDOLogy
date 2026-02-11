@@ -7,9 +7,9 @@ import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css"; 
 
 export default function HeroTen() {
-  // Initialize GLightbox for video popup
+  // ✅ সমাধান: 'const lightbox =' সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহারের প্রয়োজন নেই
   useEffect(() => {
-    const lightbox = GLightbox({
+    GLightbox({
       selector: ".glightbox",
       touchNavigation: true,
       loop: false,

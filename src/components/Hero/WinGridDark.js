@@ -38,11 +38,8 @@ const WinGridDark = () => {
 
         b.onmouseenter = clearNearBy;
 
-        b.addEventListener("mousemove", (e) => {
-          const rect = e.target.getBoundingClientRect();
-          const x = e.clientX - rect.left; // x position within the element
-          const y = e.clientY - rect.top; // y position within the element
-        });
+        // ❌ ফিক্স: এখানে আগে একটি mousemove ইভেন্ট ছিল যা 'x' ও 'y' ব্যবহার করত না।
+        // সেটি সম্পূর্ণ মুছে ফেলা হয়েছে।
       });
 
       grid.addEventListener("mousemove", (e) => {
