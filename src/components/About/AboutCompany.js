@@ -1,129 +1,222 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { Play, X, CheckCircle2, Users, Trophy, Clock, ArrowRight } from "lucide-react";
+
+// ✅ পাথ (Path) ঠিক আছে (components/Layout ফোল্ডারে ফাইল খুঁজবে)
+import PageLayout from "../Layout/PageLayout";
+import LandingHeaderTen from "../Layout/Header/LandingHeader/LandingHeaderTen";
 
 export default function AboutCompany() {
+  // --- States ---
+  // ১. হিরো সেকশনের ভিডিও স্টেট
+  const [videoOpen, setVideoOpen] = useState(false);
+  const heroVideoId = "8GT8eqdcDz0"; // আপনার হিরো ভিডিও আইডি
+
+  // ২. বেনিফিট সেকশনের ভিডিও স্টেট
+  const [benefitVideoOpen, setBenefitVideoOpen] = useState(false);
+  const benefitVideoId = "8GT8eqdcDz0"; // আপনার বেনিফিট ভিডিও আইডি
+
   return (
-    <>
+    <PageLayout>
       <Helmet>
         <title>About Us - VDOLogy</title>
-        <meta name="description" content="Learn more about VDOLogy, a creative agency specializing in video editing and graphic design. Empowering brands through visual storytelling." />
-        <meta name="keywords" content="VDOLogy, About Us, Video Editing, Graphic Design, Creative Agency, Branding" />
-        <meta name="author" content="VDOLogy Team" />
+        <meta
+          name="description"
+          content="VDOLogy is a creative agency specializing in video editing and graphic design."
+        />
       </Helmet>
 
-      <section className="w-full py-16 md:py-[130px] bg-main-black">
-        <div className="w-full mx-auto theme-container">
-          <div className="grid grid-cols-6 gap-10 lg:grid-cols-12 lg:gap-0 h-fit">
-            <div className="col-span-6 lg:pr-[87px] flex h-full items-center">
-              <div className="">
-                <div className="py-1.5 md:py-3 px-5 rounded-[30px] border-[1.2px] border-caribbean-green/30 w-fit bg-caribbean-green/10">
-                  <h1 className="text-base font-medium leading-5 tracking-tight text-caribbean-green">
-                    About Company
-                  </h1>
+      {/* --- ১. হেডার সেকশন --- */}
+      <div className="bg-main-black">
+        <LandingHeaderTen />
+      </div>
+
+      {/* --- ২. হিরো সেকশন (About Us) --- */}
+      <section className="relative py-20 md:py-32 bg-main-black overflow-hidden">
+        
+        {/* ব্যাকগ্রাউন্ড গ্লো ইফেক্ট */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-caribbean-green/5 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* টেক্সট কন্টেন্ট */}
+            <div className="space-y-8" data-aos="fade-right">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-caribbean-green/30 bg-caribbean-green/10 text-caribbean-green text-sm font-medium mb-6">
+                  <Users size={16} />
+                  About VDOLogy
                 </div>
-                <h1 className="text-24 md:text-48 font-semibold text-white mt-2.5 md:mt-5">
-                  Digital Transforming Brands, Elevating Reach Crafting Success
+                <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                  Crafting Visuals That <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-caribbean-green to-emerald-400">
+                    Drive Success
+                  </span>
                 </h1>
-                <p className="mt-5 md:mt-10 text-white">
-                  Defined by creative innovation, our visual media agency emerges
-                  as a beacon of design excellence and storytelling mastery.
+                <p className="mt-6 text-gray-400 text-lg leading-relaxed">
+                  We are more than just an agency; we are your creative partners.
+                  Defined by innovation and storytelling mastery, we transform raw
+                  ideas into digital legacies.
                 </p>
-                <hr className="mt-10 border-caribbean-green/10" />
-                <div className="w-full grid grid-cols-1 sm:grid-cols-2 mt-[50px] gap-8 md:gap-[70px]">
-                  <div data-aos="fade-left" className="grid-cols-1">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
-                        fill="#00DE8D"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M14.4605 6.40802C14.7874 6.66232 14.8463 7.13353 14.592 7.46049L10.585 12.6123C9.9613 13.4143 8.78809 13.5183 8.03296 12.8387L5.49828 10.5575C5.1904 10.2804 5.16544 9.80619 5.44254 9.49831C5.71963 9.19043 6.19385 9.16547 6.50173 9.44256L9.03641 11.7238C9.14429 11.8209 9.31189 11.806 9.40099 11.6914L13.408 6.53958C13.6623 6.21262 14.1335 6.15372 14.4605 6.40802Z"
-                        fill="white"
-                      />
-                    </svg>
-                    <h1 className="mt-4 font-semibold text-18 text-white">
-                      Expert Team Member
-                    </h1>
-                    <p className="mt-3 text-white">
-                      A creative agency that specializes in video editing and graphic design to build visually compelling brand identities.
-                    </p>
+              </div>
+
+              {/* ছোট কার্ড */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="bg-[#111] p-6 rounded-2xl border border-white/5 hover:border-caribbean-green/30 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-caribbean-green mb-4 group-hover:bg-caribbean-green group-hover:text-black transition-all">
+                    <Trophy size={24} />
                   </div>
-                  <div
-                    data-aos="fade-left"
-                    data-aos-delay="100"
-                    className="grid-cols-1"
+                  <h3 className="text-white text-xl font-bold mb-2">Expert Team</h3>
+                  <p className="text-gray-400 text-sm">Top-tier editors and designers dedicated to your growth.</p>
+                </div>
+
+                <div className="bg-[#111] p-6 rounded-2xl border border-white/5 hover:border-caribbean-green/30 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-caribbean-green mb-4 group-hover:bg-caribbean-green group-hover:text-black transition-all">
+                    <CheckCircle2 size={24} />
+                  </div>
+                  <h3 className="text-white text-xl font-bold mb-2">Creative Solutions</h3>
+                  <p className="text-gray-400 text-sm">Tailored visual strategies that leave a lasting impact.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* ভিডিও এবং ইমেজ (হিরো) */}
+            <div className="relative" data-aos="fade-left">
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 group">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                  alt="Team working"
+                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500"></div>
+                
+                {/* হিরো ভিডিও প্লে বাটন */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button
+                    onClick={() => setVideoOpen(true)}
+                    className="relative w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 text-white hover:bg-caribbean-green hover:border-caribbean-green hover:text-black transition-all duration-300 group/btn shadow-[0_0_30px_rgba(0,223,142,0.3)] animate-pulse hover:animate-none"
                   >
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10Z"
-                        fill="#00DE8D"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M14.4605 6.40802C14.7874 6.66232 14.8463 7.13353 14.592 7.46049L10.585 12.6123C9.9613 13.4143 8.78809 13.5183 8.03296 12.8387L5.49828 10.5575C5.1904 10.2804 5.16544 9.80619 5.44254 9.49831C5.71963 9.19043 6.19385 9.16547 6.50173 9.44256L9.03641 11.7238C9.14429 11.8209 9.31189 11.806 9.40099 11.6914L13.408 6.53958C13.6623 6.21262 14.1335 6.15372 14.4605 6.40802Z"
-                        fill="white"
-                      />
-                    </svg>
-                    <h1 className="mt-4 font-semibold text-18 text-white">
-                      Custom Creative Support
-                    </h1>
-                    <p className="mt-3 text-white">
-                      These services are tailored to deliver stunning visuals, engaging motion content, and on-brand designs that leave a lasting impact.
-                    </p>
+                    <Play size={32} className="ml-1 fill-current" />
+                  </button>
+                </div>
+              </div>
+
+              {/* ফ্লোটিং কার্ড */}
+              <div className="absolute -bottom-10 -left-6 md:-left-12 bg-[#1A1A1A] border border-white/10 p-6 rounded-2xl shadow-2xl max-w-[260px] hidden sm:block">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-caribbean-green flex items-center justify-center text-black">
+                    <Clock size={20} />
+                  </div>
+                  <span className="text-gray-400 text-sm">Since 2014</span>
+                </div>
+                <h3 className="text-3xl font-bold text-white">10+ Years</h3>
+                <p className="text-gray-400 text-sm mt-1">of Professional Experience</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* --- ৩. বেনিফিট সেকশন (Our Benefit) --- */}
+      <section className="w-full py-16 md:py-[130px] bg-main-black relative">
+        <div className="w-full mx-auto theme-container px-4">
+          
+          {/* টাইটেল */}
+          <div className="flex flex-col items-center justify-center mb-16">
+            <div className="py-1.5 md:py-3 px-5 rounded-[30px] border-[1.2px] border-caribbean-green/30 w-fit bg-caribbean-green/10">
+              <h1 className="text-base font-medium leading-5 tracking-tight text-caribbean-green">
+                Our Benefit
+              </h1>
+            </div>
+            <h1 className="mt-4 text-3xl md:text-5xl font-semibold text-white text-center max-w-[700px]">
+              Why Choose <span className="text-caribbean-green">VDOLogy?</span>
+            </h1>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            {/* বাম পাশ: ভিডিও (ক্লিন প্লে বাটন) */}
+            <div data-aos="fade-right" className="col-span-1 lg:col-span-5">
+              <div className="relative rounded-[30px] overflow-hidden group border border-white/10 h-full min-h-[400px]">
+                <img
+                  src="/assets/images/about/benefit-img.webp"
+                  alt="Benefit"
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                />
+                
+                {/* বেনিফিট ভিডিও প্লে বাটন */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-all">
+                  <div
+                    onClick={() => setBenefitVideoOpen(true)}
+                    className="w-[80px] h-[80px] rounded-full bg-white flex items-center justify-center cursor-pointer hover:scale-110 hover:bg-caribbean-green transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                  >
+                    <Play className="w-8 h-8 text-black fill-black ml-1" />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-end col-span-6 sm:flex-row">
-              <div className="flex items-center p-[7px] pl-5 bg-white rounded-[30px] sm:absolute left-10 top-[70px] z-10 shadow-style-one">
-                <span className="text-sm font-semibold text-black font-inter">
-                  Trusted Clients
-                </span>
-                <div className="relative flex cursor-pointer">
-                  <img src="/assets/images/about/client1.webp" alt="" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-4 hover:z-10" />
-                  <img src="/assets/images/about/client2.webp" alt="" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-3 hover:z-10" />
-                  <img src="/assets/images/about/client3.webp" alt="" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-2 hover:z-10" />
-                  <img src="/assets/images/about/client4.webp" alt="" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 -right-1 hover:z-10" />
-                  <img src="/assets/images/about/client5.webp" alt="" className="relative object-cover w-8 h-8 overflow-hidden transition-all duration-300 rounded-full sm:w-9 sm:h-9 hover:z-10" />
-                </div>
-              </div>
+            {/* ডান পাশ: টেক্সট কার্ডস */}
+            <div className="col-span-1 lg:col-span-7">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-[30px]">
+                
+                {[
+                  { title: "Visual Storytelling", desc: "We create edits and designs that emotionally connect with your audience." },
+                  { title: "Pro Tools & Talent", desc: "We use top tools and skilled artists to bring your vision to life." },
+                  { title: "Budget-Friendly", desc: "High-quality videos and graphics delivered within your budget." },
+                  { title: "Consistent Quality", desc: "We ensure brand consistency in every design and video we create." },
+                  { title: "Time-saving", desc: "We handle the visuals so you can focus on growing your business." },
+                  { title: "Consistent Results", desc: "Our data-driven approach ensures your content performs every time." },
+                ].map((item, idx) => (
+                  <div
+                    key={idx}
+                    data-aos="fade-left"
+                    data-aos-delay={idx * 100}
+                    className="bg-[#111] p-6 md:p-8 rounded-2xl border border-white/5 hover:border-caribbean-green/40 transition-all duration-300 hover:-translate-y-1 group"
+                  >
+                    <h1 className="text-xl font-bold leading-6 text-white group-hover:text-caribbean-green transition-colors">
+                      {item.title}
+                    </h1>
+                    <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
 
-              <div>
-                <img src="/assets/images/about/hero-img.webp" alt="img" className="" />
-              </div>
-
-              <div className="bg-caribbean-green p-[30px] rounded-2xl sm:absolute z-20 bottom-8 w-[295px] left-8 mt-5 sm:mt-0 max-w-full">
-                <img src="/assets/images/home-five/hero/about-card-shape.webp" alt="" className="absolute right-2 top-bottom-moving" />
-                <div className="flex items-center gap-2.5">
-                  <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.28753 7.01343L8.90454 1.36956M8.90454 1.36956L3.26066 1.75255M8.90454 1.36956L1.01321 10.4099" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <span className="text-sm leading-8 text-white">We have</span>
-                </div>
-                <h1 className="text-[27px] leading-[35px] text-white font-semibold tracking-tight max-w-[170px]">
-                  10+ Years of Experience
-                </h1>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* --- ৪. মডাল সেকশন (Modals) --- */}
+      
+      {/* Hero Video Modal */}
+      {videoOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-300">
+          <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <button onClick={() => setVideoOpen(false)} className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-red-500 text-white rounded-full flex items-center justify-center transition-all">
+              <X size={24} />
+            </button>
+            <iframe className="w-full h-full" src={`https://www.youtube.com/embed/${heroVideoId}?autoplay=1`} title="About VDOLogy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </div>
+      )}
+
+      {/* Benefit Video Modal */}
+      {benefitVideoOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-300">
+          <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+            <button onClick={() => setBenefitVideoOpen(false)} className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-red-500 text-white rounded-full flex items-center justify-center transition-all">
+              <X size={24} />
+            </button>
+            <iframe className="w-full h-full" src={`https://www.youtube.com/embed/${benefitVideoId}?autoplay=1`} title="Our Benefits Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </div>
+      )}
+
+    </PageLayout>
   );
 }

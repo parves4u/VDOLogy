@@ -2,14 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import PageLayout from "../components/Layout/PageLayout";
 import LandingHeaderTen from "../components/Layout/Header/LandingHeader/LandingHeaderTen";
-import PrivacyContent from "../components/Privacy/PrivacyContent";
+import RefundContent from "../components/Refund/RefundContent";
 
-export default function PrivacyPolicy() {
+export default function RefundPolicy() {
   return (
     <PageLayout>
       <Helmet>
-        <title>Privacy Policy - VDOLogy</title>
-        <meta name="description" content="Learn how VDOLogy collects, uses, and protects your data." />
+        <title>Refund Policy - VDOLogy</title>
+        <meta name="description" content="Read the Refund and Cancellation Policy of VDOLogy creative agency." />
       </Helmet>
 
       {/* Header */}
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* Main Content */}
-      <PrivacyContent />
+      <RefundContent />
 
     </PageLayout>
   );

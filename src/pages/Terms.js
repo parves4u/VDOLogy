@@ -2,14 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import PageLayout from "../components/Layout/PageLayout";
 import LandingHeaderTen from "../components/Layout/Header/LandingHeader/LandingHeaderTen";
-import PrivacyContent from "../components/Privacy/PrivacyContent";
+import TermsContent from "../components/Terms/TermsContent"; // এই লাইনটি খেয়াল রাখুন
 
-export default function PrivacyPolicy() {
+export default function Terms() {
   return (
     <PageLayout>
       <Helmet>
-        <title>Privacy Policy - VDOLogy</title>
-        <meta name="description" content="Learn how VDOLogy collects, uses, and protects your data." />
+        <title>Terms & Conditions - VDOLogy</title>
+        <meta name="description" content="Read the Terms and Conditions of VDOLogy creative agency." />
       </Helmet>
 
       {/* Header */}
@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* Main Content */}
-      <PrivacyContent />
+      <TermsContent />
 
     </PageLayout>
   );
