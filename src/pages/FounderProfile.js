@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { 
-  Facebook, Linkedin, Twitter, Mail, 
-  Briefcase, GraduationCap, Video, 
-  Layers, Palette, Cpu, Globe, Megaphone, 
-  CheckCircle 
+import {
+  Facebook, Linkedin, Twitter, Mail,
+  Briefcase, GraduationCap, Video,
+  Layers, Palette, Cpu, Globe, Megaphone
+  // CheckCircle বাদ দেওয়া হয়েছে কারণ এটি ব্যবহার করা হয়নি
 } from "lucide-react";
 import PageLayout from "../components/Layout/PageLayout";
 import LandingHeaderTen from "../components/Layout/Header/LandingHeader/LandingHeaderTen";
@@ -13,10 +13,12 @@ import PortfolioFooter from "../components/Layout/Footer/PortfolioFooter";
 export default function FounderProfile() {
   return (
     <PageLayout>
-      <LandingHeaderTen currentCategory={0} setCurrentCategory={() => {}} />
+      {/* LandingHeaderTen এবং PortfolioFooter এ dummy props পাঠানো হয়েছে যাতে এরর না দেয়,
+          যদি এগুলো এই পেজে দরকার না হয় তবে এগুলো রিমুভ করতে পারেন */}
+      <LandingHeaderTen currentCategory={0} setCurrentCategory={() => { }} />
 
       {/* =======================
-          1. HERO SECTION 
+          1. HERO SECTION
       ======================== */}
       <section className="relative pt-36 pb-20 bg-main-black overflow-hidden">
         {/* Background Glows */}
@@ -25,16 +27,16 @@ export default function FounderProfile() {
 
         <div className="container mx-auto px-4 md:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-            
+
             {/* Left: Image & Badge */}
             <div className="w-full lg:w-[45%] relative" data-aos="fade-right">
               <div className="relative z-10 rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] group">
-                <img 
-                  src="/assets/images/home-three/teams/1.webp" // আপনার ছবি
-                  alt="MD Parves Sikder" 
-                  className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105" 
+                <img
+                  src="https://cdn.jsdelivr.net/gh/parves4u/images/Parves.jpg" // আপনার ছবি
+                  alt="MD Parves Sikder"
+                  className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
                 />
-                
+
                 {/* Name Badge Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent p-8 pt-24">
                   <h1 className="text-3xl md:text-5xl font-bold text-white mb-2">MD Parves Sikder</h1>
@@ -52,22 +54,22 @@ export default function FounderProfile() {
                 <span className="w-2 h-2 rounded-full bg-caribbean-green animate-pulse"></span>
                 10+ Years of Experience
               </div>
-              
+
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Crafting Visual Stories <br/>
+                Crafting Visual Stories <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-caribbean-green to-emerald-400">
                   That Drive Results.
                 </span>
               </h2>
 
               <div className="space-y-5 text-gray-400 text-lg leading-relaxed mb-8 text-justify">
-  <p>
-    Hi, I’m <strong>Parves</strong>. I am a passionate Creative Director specializing in <strong>Video Editing, Motion Graphics, and Graphic Design</strong>.
-  </p>
-  <p>
-    My journey began in 2016, blending a background in Computer Science with a deep love for creative arts. While my core expertise lies in crafting cinematic videos and stunning visuals, I believe in offering a complete digital solution. To help brands scale seamlessly, I also provide expert <strong>Website Development</strong> and <strong>Digital Marketing</strong> services—ensuring your visual identity matches your digital presence.
-  </p>
-</div>
+                <p>
+                  Hi, I’m <strong>Parves</strong>. I am a passionate Creative Director specializing in <strong>Video Editing, Motion Graphics, and Graphic Design</strong>.
+                </p>
+                <p>
+                  My journey began in 2016, blending a background in Computer Science with a deep love for creative arts. While my core expertise lies in crafting cinematic videos and stunning visuals, I believe in offering a complete digital solution. To help brands scale seamlessly, I also provide expert <strong>Website Development</strong> and <strong>Digital Marketing</strong> services—ensuring your visual identity matches your digital presence.
+                </p>
+              </div>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-6">
@@ -75,10 +77,11 @@ export default function FounderProfile() {
                   Start a Project
                 </Link>
                 <div className="flex gap-4">
-                  <SocialIcon Icon={Facebook} link="#" color="hover:bg-blue-600" />
-                  <SocialIcon Icon={Linkedin} link="#" color="hover:bg-blue-500" />
-                  <SocialIcon Icon={Twitter} link="#" color="hover:bg-sky-400" />
-                  <SocialIcon Icon={Mail} link="mailto:write2parves@gmail.com" color="hover:bg-red-500" />
+                  {/* ariaLabel যুক্ত করা হয়েছে অ্যাক্সেসিবিলিটির জন্য */}
+                  <SocialIcon Icon={Facebook} link="#" color="hover:bg-blue-600" ariaLabel="Facebook Profile" />
+                  <SocialIcon Icon={Linkedin} link="#" color="hover:bg-blue-500" ariaLabel="LinkedIn Profile" />
+                  <SocialIcon Icon={Twitter} link="#" color="hover:bg-sky-400" ariaLabel="Twitter Profile" />
+                  <SocialIcon Icon={Mail} link="mailto:write2parves@gmail.com" color="hover:bg-red-500" ariaLabel="Send Email" />
                 </div>
               </div>
             </div>
@@ -97,19 +100,19 @@ export default function FounderProfile() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ExpertiseCard 
-              icon={<Video size={32}/>} 
-              title="Video Editing" 
+            <ExpertiseCard
+              icon={<Video size={32} />}
+              title="Video Editing"
               desc="Cinematic storytelling, Documentary style, and high-retention social media edits using Premiere Pro & DaVinci Resolve."
             />
-            <ExpertiseCard 
-              icon={<Layers size={32}/>} 
-              title="Motion Graphics" 
+            <ExpertiseCard
+              icon={<Layers size={32} />}
+              title="Motion Graphics"
               desc="Advanced 2D animation, Kinetic Typography, and VFX compositing using After Effects to bring static visuals to life."
             />
-            <ExpertiseCard 
-              icon={<Palette size={32}/>} 
-              title="Graphic Design" 
+            <ExpertiseCard
+              icon={<Palette size={32} />}
+              title="Graphic Design"
               desc="Brand identity, Thumbnails, and UI elements designed with Adobe Photoshop & Illustrator for maximum impact."
             />
           </div>
@@ -122,17 +125,17 @@ export default function FounderProfile() {
       <section className="py-20 bg-main-black relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-12">
-            
+
             {/* Left: Tech Skills */}
             <div className="w-full md:w-1/2">
               <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-caribbean-green pl-4">
                 Beyond Creativity (Tech & AI)
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <TechCard icon={<Cpu/>} title="AI Generation" desc="Video, Image & Prompt Engineering" />
-                <TechCard icon={<Globe/>} title="Web Development" desc="WordPress, Shopify & Custom Code" />
-                <TechCard icon={<Megaphone/>} title="Digital Marketing" desc="Facebook Boosting & Ad Management" />
-                <TechCard icon={<Briefcase/>} title="Social Management" desc="Full Page Growth Strategy" />
+                <TechCard icon={<Cpu />} title="AI Generation" desc="Video, Image & Prompt Engineering" />
+                <TechCard icon={<Globe />} title="Web Development" desc="WordPress, Shopify & Custom Code" />
+                <TechCard icon={<Megaphone />} title="Digital Marketing" desc="Facebook Boosting & Ad Management" />
+                <TechCard icon={<Briefcase />} title="Social Management" desc="Full Page Growth Strategy" />
               </div>
             </div>
 
@@ -161,30 +164,30 @@ export default function FounderProfile() {
       <section className="py-20 bg-[#0F0F0F] relative border-t border-white/5">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
+
             {/* Experience Column */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <Briefcase className="text-caribbean-green"/> Work Experience
+                <Briefcase className="text-caribbean-green" /> Work Experience
               </h3>
               <div className="space-y-8 border-l border-white/10 pl-8 relative">
-                
-                <TimelineItem 
+
+                <TimelineItem
                   role="Founder & CEO"
                   company="VDOLogy"
                   year="Present"
                   desc="Leading a creative agency delivering high-end video and web solutions to global clients."
                   current={true}
                 />
-                
-                <TimelineItem 
+
+                <TimelineItem
                   role="Video Editor & Motion Graphics Designer"
                   company="FIFO Tech"
                   year="2018 - Present"
                   desc="Editing and producing video content for various platforms, ensuring consistency in style and branding. Designing graphics and aligning assets with client guidelines."
                 />
 
-                <TimelineItem 
+                <TimelineItem
                   role="Video Editor & Motion Graphics Designer"
                   company="ACE Digital Solutions, LLC"
                   year="2021 - Present"
@@ -196,22 +199,22 @@ export default function FounderProfile() {
             {/* Education Column */}
             <div>
               <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <GraduationCap className="text-caribbean-green"/> Education
+                <GraduationCap className="text-caribbean-green" /> Education
               </h3>
               <div className="space-y-8 border-l border-white/10 pl-8 relative">
-                <TimelineItem 
+                <TimelineItem
                   role="BSc in Computer Science & Engineering"
                   company="Sonargaon University"
                   year="2018 - 2021"
                   desc="Specializing in software, programming, and modern technology stacks."
                 />
-                <TimelineItem 
+                <TimelineItem
                   role="Diploma-in-Engineering (Computer Tech)"
                   company="Infra Polytechnic Institute, Barisal"
                   year="2011 - 2016"
                   desc="Bangladesh Technical Education Board."
                 />
-                <TimelineItem 
+                <TimelineItem
                   role="Secondary School Certificate (Technical)"
                   company="Timirkati High School, Jhalakati"
                   year="2010 - 2011"
@@ -224,17 +227,23 @@ export default function FounderProfile() {
         </div>
       </section>
 
-      <PortfolioFooter currentCategory={0} setCurrentCategory={() => {}} />
+      <PortfolioFooter currentCategory={0} setCurrentCategory={() => { }} />
     </PageLayout>
   );
 }
 
 // --- Helper Components ---
 
-// 1. Social Icon
-const SocialIcon = ({ Icon, link, color }) => (
-  <a href={link} target="_blank" rel="noreferrer" className={`w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white ${color} transition-all duration-300 hover:scale-110`}>
-    <Icon size={18}/>
+// 1. Social Icon (Updated for security and accessibility)
+const SocialIcon = ({ Icon, link, color, ariaLabel }) => (
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer" // নিরাপত্তা বৃদ্ধি করা হয়েছে
+    aria-label={ariaLabel} // স্ক্রিন রিডারের জন্য লেবেল যুক্ত করা হয়েছে
+    className={`w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white ${color} transition-all duration-300 hover:scale-110`}
+  >
+    <Icon size={18} />
   </a>
 );
 
@@ -278,7 +287,7 @@ const TimelineItem = ({ role, company, year, desc, current }) => (
   <div className="relative">
     {/* Dot */}
     <span className={`absolute -left-[39px] top-1 w-5 h-5 rounded-full border-4 border-[#0F0F0F] ${current ? 'bg-caribbean-green shadow-[0_0_10px_#00DF8E]' : 'bg-gray-600'}`}></span>
-    
+
     <h4 className="text-xl font-bold text-white">{role}</h4>
     <p className="text-caribbean-green text-sm font-semibold mt-1 mb-2">{company} <span className="text-gray-500">| {year}</span></p>
     <p className="text-gray-400 text-sm leading-relaxed">
