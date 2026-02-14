@@ -84,7 +84,6 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
                 <Link className="hover:text-caribbean-green transition-colors" to="/">Home</Link>
               </li>
               <li>
-                {/* ✅ FIX: Features লিংক আপডেট করা হয়েছে */}
                 <Link to="/#features" className="hover:text-caribbean-green transition-colors">Features</Link>
               </li>
               
@@ -115,6 +114,11 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
 
               <li><Link to="/about" className="hover:text-caribbean-green transition-colors">About</Link></li>
               
+              {/* ✅ NEW: Meet Founder Link (Desktop) */}
+              <li>
+                <Link to="/meet-founder" className="hover:text-caribbean-green transition-colors">Meet Founder</Link>
+              </li>
+
               <li>
                 <button 
                     onClick={() => {
@@ -130,7 +134,6 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
                 </button>
               </li>
               <li>
-                {/* ✅ FIX: Pricing লিংক আপডেট করা হয়েছে */}
                 <Link to="/#pricing" className="hover:text-caribbean-green transition-colors">Pricing</Link>
               </li>
             </ul>
@@ -171,8 +174,6 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
       <div className={`fixed inset-0 z-40 bg-main-black/95 backdrop-blur-md transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"} xl:hidden flex flex-col justify-center`}>
         <ul className="flex flex-col items-center gap-6 p-6 text-lg font-medium text-white font-inter h-full justify-center overflow-y-auto">
           <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
-          
-          {/* ✅ FIX: Mobile Features Link */}
           <li><Link to="/#features" onClick={closeMobileMenu}>Features</Link></li>
           
           {/* Mobile Works Submenu */}
@@ -200,6 +201,10 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
           </li>
 
           <li><Link to="/about" onClick={closeMobileMenu}>About</Link></li>
+          
+          {/* ✅ NEW: Meet Founder Link (Mobile) */}
+          <li><Link to="/meet-founder" onClick={closeMobileMenu}>Meet Founder</Link></li>
+
           <li>
             <button 
                 onClick={() => {
@@ -213,7 +218,6 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
             </button>
           </li>
           
-          {/* ✅ FIX: Mobile Pricing Link */}
           <li><Link to="/#pricing" onClick={closeMobileMenu}>Pricing</Link></li>
           
           {/* Mobile Contact Info */}
