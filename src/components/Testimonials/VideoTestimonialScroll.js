@@ -13,11 +13,11 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Cia E",
-    role: "Trauma Recovery Coach",
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1887&auto=format&fit=crop",
+    name: "Christian Crenshaw",
+    role: "Founder, Community Launch & Social Media Strategist",
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Testimonials2.jpg",
     // 💻 Standard Video
-    videoUrl: "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+    videoUrl: "https://www.youtube.com/shorts/mKOervEADCE",
   },
   {
     id: 3,
