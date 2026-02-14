@@ -78,10 +78,10 @@ export default function FounderProfile() {
                 </Link>
                 <div className="flex gap-4">
                   {/* ariaLabel যুক্ত করা হয়েছে অ্যাক্সেসিবিলিটির জন্য */}
-                  <SocialIcon Icon={Facebook} link="#" color="hover:bg-blue-600" ariaLabel="Facebook Profile" />
-                  <SocialIcon Icon={Linkedin} link="#" color="hover:bg-blue-500" ariaLabel="LinkedIn Profile" />
-                  <SocialIcon Icon={Twitter} link="#" color="hover:bg-sky-400" ariaLabel="Twitter Profile" />
-                  <SocialIcon Icon={Mail} link="mailto:write2parves@gmail.com" color="hover:bg-red-500" ariaLabel="Send Email" />
+                  <SocialIcon Icon={Facebook} link="https://www.facebook.com/JourneyWithParves/" color="hover:bg-blue-600" ariaLabel="Facebook Profile" />
+                  <SocialIcon Icon={Linkedin} link="https://www.linkedin.com/in/parvesbsl/" color="hover:bg-blue-500" ariaLabel="LinkedIn Profile" />
+                  <SocialIcon Icon={Twitter} link="https://x.com/parvesbsl" color="hover:bg-sky-400" ariaLabel="Twitter Profile" />
+                  <SocialIcon Icon={Mail} link="mailto:parvestk@gmail.com" color="hover:bg-red-500" ariaLabel="Send Email" />
                 </div>
               </div>
             </div>

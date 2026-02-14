@@ -21,10 +21,10 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Marc Palombo",
-    role: "Actor, The Talent Group",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop",
-    videoUrl: "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+    name: "Elizabeth",
+    role: "Business Owner",
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Testimonials3.jpg",
+    videoUrl: "https://www.youtube.com/shorts/phobTXBaJ1Q",
   },
   {
     id: 4,
