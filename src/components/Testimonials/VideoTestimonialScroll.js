@@ -6,7 +6,7 @@ const testimonials = [
   {
     id: 1,
     name: "Joseph Montemorano",
-    role: "Owner, ACE Digital Solutions",
+    role: "Owner, ACE Digital Solutions, LLC",
     image: "https://cdn.jsdelivr.net/gh/parves4u/images/Testimonials.jpg",
     // 📱 Shorts Video
     videoUrl: "https://www.youtube.com/shorts/6lp3hxcaVaQ", 
@@ -28,17 +28,17 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Breanna Danielle",
-    role: "Founder of them3method",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
-    videoUrl: "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+    name: "Joseph Montemorano",
+    role: "Owner, ACE Digital Solutions, LLC",
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Testimonials4.jpg",
+    videoUrl: "https://www.youtube.com/shorts/ug4UZoLxz5o",
   },
   {
     id: 5,
-    name: "Alex Johnson",
-    role: "Marketing Director",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop",
-    videoUrl: "https://www.youtube.com/watch?v=ScMzIvxBSi4",
+    name: "Elizabeth",
+    role: "Content Creator",
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Testimonials5.jpg",
+    videoUrl: "https://www.youtube.com/shorts/PjVoH76K9As",
   },
 ];
 
