@@ -7,7 +7,7 @@ import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css"; 
 
 export default function HeroTen() {
-  // ✅ সমাধান: 'const lightbox =' সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহারের প্রয়োজন নেই
+  // ✅ সমাধান: 'const lightbox =' সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহারের প্রয়োজন নেই
   useEffect(() => {
     GLightbox({
       selector: ".glightbox",
@@ -73,11 +73,13 @@ export default function HeroTen() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                <Link to="/contact">
+                {/* ✅ FIX: Start a Project এখন /submit-project পেজে যাবে */}
+                <Link to="/submit-project">
                   <button className="px-8 py-4 bg-caribbean-green text-main-black font-bold rounded-full hover:bg-white transition-all duration-300 transform hover:scale-105 border border-caribbean-green">
                     Start a Project
                   </button>
                 </Link>
+                
                 <Link to="/contact">
                   <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-md">
                     Book a Call

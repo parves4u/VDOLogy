@@ -19,7 +19,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import Checkout from "./pages/Checkout";
 import Careers from "./pages/Careers";
 import FounderProfile from "./pages/FounderProfile";
-
+import ProjectSubmission from "./pages/ProjectSubmission";
 // Legacy
 import TermsAndPrivacy from "./pages/TermsAndPrivacy"; 
 
@@ -41,6 +41,7 @@ export default function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/meet-founder" element={<FounderProfile />} />
+        <Route path="/submit-project" element={<ProjectSubmission />} />
         
         
         {/* Legal Pages Routes */}
