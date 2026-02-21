@@ -8,14 +8,14 @@ const industriesData = [
     label: "Podcasting",
     icon: <Mic size={18} />,
     title: "Podcasting & Audio Series",
-    description: "Our brilliant team are experts in both 2D and 3D Animation. We create Character Animation and Explainers for personal and commercial use to skyrocket your listener base.",
+    description: "Our brilliant team helps you launch and grow your podcast with professional audio and video production. We handle everything from editing and mixing to creating engaging social clips, ensuring your message reaches the widest audience.",
     points: [
       "Professional Audio Engineering",
       "Video Podcast Production (Multi-cam)",
       "Social Media Clips & Shorts from Episodes",
       "Full Episode Transcription & Show Notes"
     ],
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1920&auto=format&fit=crop"
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Podcasting.jpg"
   },
   {
     id: "corporate",
@@ -29,21 +29,21 @@ const industriesData = [
       "Event Coverage & Highlights",
       "Executive Interviews & Testimonials"
     ],
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1920&auto=format&fit=crop"
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Corporate.jpg"
   },
   {
     id: "saas",
     label: "SaaS & Tech",
     icon: <Layers size={18} />,
-    title: "SaaS & Technology",
-    description: "Simplify complex tech concepts with engaging visuals. We help SaaS companies demonstrate value and drive conversions through motion graphics and demos.",
+    title: "SaaS & Technology: Simplify & Scale",
+    description: "We help SaaS and tech companies explain their complex products simply and effectively. Through engaging motion graphics, demos, and tutorials, we drive user adoption and boost conversions.",
     points: [
       "App & Software Demo Videos",
-      "Explainer Animations",
-      "Feature Release Highlights",
-      "Customer Success Stories"
+      "Explainer Animations for Complex Tech",
+      "Feature Release Highlights & Updates",
+      "Customer Onboarding & Tutorial Videos"
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1920&auto=format&fit=crop"
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/SaaS & Tech.jpg"
   },
   {
     id: "content",
@@ -57,7 +57,7 @@ const industriesData = [
       "Thumbnail Design & Strategy",
       "Channel Management Support"
     ],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1920&auto=format&fit=crop"
+    image: "https://cdn.jsdelivr.net/gh/parves4u/images/Content Creation.jpg"
   }
 ];
 

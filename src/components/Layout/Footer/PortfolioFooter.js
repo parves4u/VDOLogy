@@ -60,7 +60,7 @@ export default function PortfolioFooter({ setCurrentCategory }) {
           {/* --- Brand & Intro --- */}
           <div className="space-y-6">
             <Link to="/" onClick={scrollToTop}>
-              <img src="/assets/images/home-ten/logo.svg" alt="VDOLogy" className="h-10 transition-transform duration-300 hover:scale-105" />
+              <img src="/assets/images/home-ten/logo.svg" alt="VDOLogy" className="h-16 transition-transform duration-300 hover:scale-105" />
             </Link>
             <p className="text-[15px] leading-relaxed text-gray-400">
               Specializes in video editing and graphic design. With a keen eye for detail, 

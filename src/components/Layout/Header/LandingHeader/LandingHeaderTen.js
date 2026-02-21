@@ -73,7 +73,7 @@ export default function LandingHeaderTen({ currentCategory, setCurrentCategory }
           {/* Logo Section */}
           <div className="flex items-center gap-0 md:gap-24">
             <Link to="/" onClick={closeMobileMenu}>
-              <img src="/assets/images/home-ten/logo.svg" alt="Video Logy Logo" className="h-10 w-auto" />
+              <img src="/assets/images/home-ten/logo.svg" alt="Video Logy Logo" className="h-12 w-auto" />
             </Link>
           </div>
 
