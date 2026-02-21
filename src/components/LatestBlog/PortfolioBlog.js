@@ -69,7 +69,6 @@ export default function PricingSection() {
             Monthly Retainers
           </div>
           
-          {/* ✅ ফিক্স: leading-tight এর বদলে leading-snug ব্যবহার করা হয়েছে */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-snug">
             Predictable Growth with <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-caribbean-green to-emerald-400 flex items-center justify-center gap-3 mt-2">
@@ -89,22 +88,22 @@ export default function PricingSection() {
               key={plan.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className={`relative flex flex-col p-8 md:p-10 rounded-3xl border transition-all duration-300 group
+              className={`relative flex flex-col p-8 md:p-10 rounded-3xl border transition-all duration-300 group mt-4 md:mt-0
                 ${plan.recommended 
                   ? "bg-[#111] border-caribbean-green/80 shadow-[0_0_40px_rgba(0,223,142,0.15)] scale-100 lg:scale-105 z-10" 
                   : "bg-[#0A0A0A] border-white/10 hover:border-caribbean-green/50 hover:bg-[#111]"
                 }
               `}
             >
-              {/* Recommended Badge */}
+              {/* ✅ FIXED: Recommended Badge (Added whitespace-nowrap & w-max) */}
               {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-caribbean-green to-emerald-500 text-black text-[11px] uppercase tracking-widest font-black px-5 py-2 rounded-full flex items-center gap-1.5 shadow-lg">
-                  <Star size={14} fill="black" /> Most Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-max whitespace-nowrap bg-gradient-to-r from-caribbean-green to-emerald-500 text-black text-[10px] md:text-[11px] uppercase tracking-widest font-black px-4 md:px-5 py-1.5 md:py-2 rounded-full flex items-center gap-1.5 shadow-lg">
+                  <Star size={14} fill="black" className="w-3 h-3 md:w-3.5 md:h-3.5" /> Most Popular
                 </div>
               )}
 
               {/* Card Header */}
-              <div className="mb-8 border-b border-white/10 pb-8">
+              <div className="mb-8 border-b border-white/10 pb-8 mt-2">
                 <h3 className={`text-2xl font-bold mb-3 ${plan.recommended ? "text-white" : "text-gray-200"}`}>
                   {plan.name}
                 </h3>
