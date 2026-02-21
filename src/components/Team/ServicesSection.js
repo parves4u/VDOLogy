@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Play, X, ArrowRight, ExternalLink, Globe, TrendingUp, Target, BarChart, Maximize2, Headphones, Mic2, Box, Radio } from "lucide-react";
+import { Play, X, ArrowRight, ExternalLink, Globe, TrendingUp, Target, BarChart, Maximize2, Headphones, Mic2, Box, Radio } from "lucide-react";
 
 // ==========================================
 // 1. DATA SECTION
@@ -23,7 +23,6 @@ const videosData = {
     { title: "Physical Fitness Video", description: "Edited fitness session videos with timers.", image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumbnail5.jpg", youtubeId: "jpRUU2RJJxM", type: "full", isRecent: true },
     { title: "Company Promo Edit", description: "Provided full-service editing for company footage.", image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumbnail9.jpg", youtubeId: "oQ1BdUKS9TI", type: "full", isRecent: true },
   ],
-  // ✅ FIX: Podcast ডাটাতে episode, duration এবং features যুক্ত করা হয়েছে
   "Podcast": [
     { title: "Interview Zoom Meeting", description: "Enhanced visuals and audio for professional interview, making remote calls look studio-grade.", image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumbnail15.jpg", youtubeId: "xxGFGdvi1CE", type: "full", episode: "Ep. 24", duration: "45 Min", features: ["Zoom Sync", "Clean Audio"], isRecent: true },
     { title: "Podcast Video Editing", description: "Synced visuals, lower thirds, and branding for a high-quality video podcast format.", image: "https://cdn.jsdelivr.net/gh/parves4u/images/Thumbnail50.jpg", youtubeId: "yDq1YAplloI", type: "full", episode: "Ep. 18", duration: "1H 10M", features: ["Multi-Cam", "Color Grade"], isRecent: false },
@@ -99,7 +98,7 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
   const isWebDevelopment = categoryName === "Web Development";
   const isAudioEditing = categoryName === "Audio Editing";
   const isAnimation = categoryName === "2D/3D Animation"; 
-  const isPodcast = categoryName === "Podcast"; // ✅ Added Podcast Flag
+  const isPodcast = categoryName === "Podcast"; 
   const isShortFormCategory = categoryName === "Short Form";
   const isVideoEditing = categoryName === "Video Editing";
 
@@ -135,10 +134,6 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
   // Slicing for View More
   const visibleContent = filteredContent.slice(0, visibleCount);
 
-  // Handlers
-  const handlePrev = () => setCurrentCategory(prev => prev === 0 ? categories.length - 1 : prev - 1);
-  const handleNext = () => setCurrentCategory(prev => prev === categories.length - 1 ? 0 : prev + 1);
-  
   const handleViewMore = () => {
     const increment = (isShortFormCategory || videoType === 'short' || isGraphicDesign || isWebDevelopment || isDigitalMarketing) ? 3 : 2;
     setVisibleCount(prev => prev + increment); 
@@ -162,34 +157,68 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
     <section className="py-20 bg-main-black relative overflow-hidden" id="works">
       <div className="container mx-auto px-4 md:px-6">
         
-        {/* --- Header Navigation --- */}
-        <div className="flex items-center justify-center gap-6 mb-12">
-          <button onClick={handlePrev} className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-caribbean-green hover:border-caribbean-green hover:text-black text-white transition-all duration-300">
-            <ChevronLeft size={24} />
-          </button>
-
-          <div className="relative group">
-            <h2 className="text-3xl md:text-5xl font-bold text-white text-center px-4">
-              {categoryName}
-            </h2>
-            <div className="h-1 w-1/2 bg-caribbean-green mx-auto mt-2 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+        {/* ==========================================
+            ✅ NEW MODERN & ORGANIZED CATEGORY MENU
+        ========================================== */}
+        <div className="mb-14">
+          
+          {/* Main Section Title */}
+          <div className="text-center mb-10" data-aos="fade-up">
+             <span className="px-4 py-1.5 rounded-full border border-caribbean-green/30 bg-caribbean-green/10 text-caribbean-green text-sm font-bold mb-4 inline-block tracking-wide uppercase">
+               Our Portfolio
+             </span>
+             <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-caribbean-green to-emerald-400">Works</span>
+             </h2>
           </div>
 
-          <button onClick={handleNext} className="p-3 rounded-full bg-white/5 border border-white/10 hover:bg-caribbean-green hover:border-caribbean-green hover:text-black text-white transition-all duration-300">
-            <ChevronRight size={24} />
-          </button>
-        </div>
+          {/* Desktop Wrap / Mobile Horizontal Scroll Navigation */}
+          <div className="relative max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            
+            {/* Mobile Scroll Fade Indicators (Right Side) */}
+            <div className="md:hidden absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-main-black to-transparent pointer-events-none z-10"></div>
+            {/* Mobile Scroll Fade Indicators (Left Side) */}
+            <div className="md:hidden absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-main-black to-transparent pointer-events-none z-10"></div>
 
-        {/* --- Filters --- */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
-          <div className="flex gap-3">
-            {isVideoEditing && (
-              <div className="p-1 bg-white/5 rounded-full border border-white/10 flex">
-                <button onClick={() => setVideoType("full")} className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${videoType === "full" ? "bg-caribbean-green text-black shadow-lg" : "text-gray-400 hover:text-white"}`}>Full-Form</button>
-                <button onClick={() => setVideoType("short")} className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${videoType === "short" ? "bg-caribbean-green text-black shadow-lg" : "text-gray-400 hover:text-white"}`}>Short-Form</button>
-              </div>
-            )}
+            <div className="flex md:flex-wrap justify-start md:justify-center items-center overflow-x-auto hide-scrollbar gap-2 md:gap-3 pb-2 px-4 md:px-0">
+              {categories.map((cat, index) => {
+                const isActive = currentCategory === index;
+                return (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentCategory(index)}
+                    className={`relative flex-shrink-0 px-5 md:px-6 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 outline-none
+                      ${isActive 
+                        ? "bg-caribbean-green text-black shadow-[0_4px_20px_rgba(0,223,142,0.4)]" 
+                        : "bg-[#111] text-gray-400 border border-white/5 hover:bg-white/10 hover:text-white"
+                      }
+                    `}
+                  >
+                    {cat.name}
+                  </button>
+                );
+              })}
+            </div>
           </div>
+
+          {/* Sub-Filter (Full/Short Form toggle) - Appears smoothly when Video Editing is selected */}
+          <div className={`transition-all duration-500 overflow-hidden flex justify-center ${isVideoEditing ? "max-h-20 opacity-100 mt-6" : "max-h-0 opacity-0 mt-0"}`}>
+            <div className="p-1 bg-[#111] rounded-full border border-white/5 flex shadow-lg">
+              <button 
+                onClick={() => setVideoType("full")} 
+                className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${videoType === "full" ? "bg-[#222] text-caribbean-green" : "text-gray-500 hover:text-white"}`}
+              >
+                Full-Form
+              </button>
+              <button 
+                onClick={() => setVideoType("short")} 
+                className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${videoType === "short" ? "bg-[#222] text-caribbean-green" : "text-gray-500 hover:text-white"}`}
+              >
+                Short-Form
+              </button>
+            </div>
+          </div>
+
         </div>
 
         {/* --- Content Grid --- */}
@@ -655,6 +684,17 @@ const ServicesSection = ({ currentCategory, setCurrentCategory }) => {
         )}
 
       </div>
+
+      {/* --- Hide Scrollbar CSS --- */}
+      <style jsx>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 };

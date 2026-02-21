@@ -7,7 +7,6 @@ import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css"; 
 
 export default function HeroTen() {
-  // ✅ সমাধান: 'const lightbox =' সরিয়ে দেওয়া হয়েছে কারণ এটি ব্যবহারের প্রয়োজন নেই
   useEffect(() => {
     GLightbox({
       selector: ".glightbox",
@@ -19,7 +18,6 @@ export default function HeroTen() {
 
   return (
     <>
-      {/* SEO Meta Tags */}
       <Helmet>
         <title>VDOLogy - Professional Video & Graphics Solutions</title>
         <meta
@@ -30,9 +28,6 @@ export default function HeroTen() {
 
       <section
         id="banner"
-        // CHANGE: Adjusted padding to be balanced. 
-        // pt-32 (Mobile) -> md:pt-44 (Tablet) -> lg:pt-52 (Desktop) ensures it clears the header nicely.
-        // pb-20 (Mobile) -> lg:pb-32 (Desktop) keeps enough breathing room at the bottom.
         className="relative flex justify-center w-full pt-32 pb-20 md:pt-44 md:pb-24 lg:pt-52 lg:pb-32 overflow-hidden bg-main-black items-center"
       >
         {/* Background Grid */}
@@ -73,9 +68,8 @@ export default function HeroTen() {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-                {/* ✅ FIX: Start a Project এখন /submit-project পেজে যাবে */}
                 <Link to="/submit-project">
-                  <button className="px-8 py-4 bg-caribbean-green text-main-black font-bold rounded-full hover:bg-white transition-all duration-300 transform hover:scale-105 border border-caribbean-green">
+                  <button className="px-8 py-4 bg-caribbean-green text-main-black font-bold rounded-full hover:bg-white transition-all duration-300 transform hover:scale-105 border border-caribbean-green shadow-[0_0_20px_rgba(0,223,142,0.3)]">
                     Start a Project
                   </button>
                 </Link>
@@ -89,7 +83,7 @@ export default function HeroTen() {
             </div>
 
             {/* --- RIGHT SIDE: Video Thumbnail & Stats --- */}
-            <div className="relative w-full flex justify-center lg:justify-end mt-8 lg:mt-0 order-1 lg:order-2">
+            <div className="relative w-full flex flex-col items-center lg:items-end mt-8 lg:mt-0 order-1 lg:order-2">
               
               {/* Main Video Container */}
               <div className="relative z-10 w-full max-w-[600px] group">
@@ -97,7 +91,6 @@ export default function HeroTen() {
                 {/* Video Thumbnail Image */}
                 <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl bg-main-black/50 backdrop-blur-sm aspect-video">
                   <img 
-                    // আপনার ভিডিও থাম্বনেইল এর ইমেজ পাথ এখানে দিন
                     src="https://cdn.jsdelivr.net/gh/parves4u/images/Thumbnail03.jpg"  
                     alt="Video Editing Showreel" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
@@ -108,7 +101,6 @@ export default function HeroTen() {
 
                   {/* Play Button (Center) */}
                   <a 
-                    // এখানে আপনার ইউটিউব ভিডিওর লিংক দিন
                     href="https://www.youtube.com/watch?v=CzKJeJJ-LNA" 
                     className="glightbox absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 md:w-20 md:h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 cursor-pointer hover:bg-caribbean-green hover:border-caribbean-green transition-all duration-300 animate-pulse group-hover:animate-none"
                   >
@@ -123,41 +115,69 @@ export default function HeroTen() {
                   </div>
                 </div>
 
-                {/* --- Floating Stats Badges (Around the video) --- */}
-
-                {/* Badge 1: Experience (Left) */}
-                <div className="absolute top-[10%] -left-2 md:-left-12 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-xl animate-bounce-slow transform scale-90 md:scale-100 origin-right">
-                  <h3 className="text-caribbean-green font-bold text-xl md:text-2xl">
+                {/* =========================================================
+                    DESKTOP FLOATING BADGES (Hidden on Mobile)
+                ========================================================= */}
+                
+                {/* Badge 1: Experience */}
+                <div className="hidden md:block absolute top-[10%] -left-12 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-xl animate-bounce-slow transform origin-right">
+                  <h3 className="text-caribbean-green font-bold text-2xl">
                       <CountUp start={0} end={10} />+
                   </h3>
-                  <p className="text-white text-xs md:text-sm font-medium">Years of <br/> Experience</p>
+                  <p className="text-white text-sm font-medium">Years of <br/> Experience</p>
                 </div>
 
-                {/* Badge 2: Team (Right) */}
-                <div className="absolute top-[30%] -right-2 md:-right-8 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-3 md:p-4 rounded-xl md:rounded-2xl shadow-xl transform scale-90 md:scale-100 origin-left">
-                  <h3 className="text-caribbean-green font-bold text-xl md:text-2xl">
+                {/* Badge 2: Team */}
+                <div className="hidden md:block absolute top-[30%] -right-8 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-xl transform origin-left">
+                  <h3 className="text-caribbean-green font-bold text-2xl">
                       <CountUp start={0} end={12} />+
                   </h3>
-                  <p className="text-white text-xs md:text-sm font-medium">Team <br/> Members</p>
+                  <p className="text-white text-sm font-medium">Team <br/> Members</p>
                 </div>
 
-                {/* Badge 3: Projects (Bottom Left) */}
-                <div className="absolute -bottom-6 left-2 md:-left-6 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-3 md:p-5 rounded-xl md:rounded-2xl shadow-xl flex items-center gap-3 md:gap-4 max-w-[200px] md:max-w-[220px] transform scale-90 md:scale-100 origin-top-right">
-                  <div className="bg-caribbean-green/20 p-2 md:p-3 rounded-full shrink-0">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00DF8E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:w-6 md:h-6">
+                {/* Badge 3: Projects */}
+                <div className="hidden md:flex absolute -bottom-6 -left-6 z-20 bg-[#1D1D1D]/90 backdrop-blur-md border border-white/10 p-5 rounded-2xl shadow-xl items-center gap-4 max-w-[220px] transform origin-top-right">
+                  <div className="bg-caribbean-green/20 p-3 rounded-full shrink-0">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00DF8E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                       </svg>
                   </div>
                   <div>
-                      <h3 className="text-white font-bold text-lg md:text-xl">
+                      <h3 className="text-white font-bold text-xl">
                           <CountUp start={0} end={1000} />+
                       </h3>
-                      <p className="text-gray-400 text-[10px] md:text-xs font-medium uppercase tracking-wider">Successful Projects</p>
+                      <p className="text-gray-400 text-xs font-medium uppercase tracking-wider">Successful Projects</p>
                   </div>
                 </div>
 
               </div>
+
+              {/* =========================================================
+                  MOBILE STATS BAR (Visible ONLY on Mobile)
+              ========================================================= */}
+              <div className="md:hidden w-full mt-6 bg-[#1D1D1D]/80 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex justify-between items-center shadow-2xl relative z-20">
+                 
+                 {/* Stat 1 */}
+                 <div className="text-center flex-1 border-r border-white/10 px-1">
+                    <h3 className="text-caribbean-green font-bold text-xl sm:text-2xl"><CountUp start={0} end={10} />+</h3>
+                    <p className="text-gray-400 text-[10px] sm:text-xs font-medium uppercase tracking-wider mt-1">Years Exp</p>
+                 </div>
+                 
+                 {/* Stat 2 */}
+                 <div className="text-center flex-1 border-r border-white/10 px-1">
+                    <h3 className="text-caribbean-green font-bold text-xl sm:text-2xl"><CountUp start={0} end={1000} />+</h3>
+                    <p className="text-gray-400 text-[10px] sm:text-xs font-medium uppercase tracking-wider mt-1">Projects</p>
+                 </div>
+                 
+                 {/* Stat 3 */}
+                 <div className="text-center flex-1 px-1">
+                    <h3 className="text-caribbean-green font-bold text-xl sm:text-2xl"><CountUp start={0} end={12} />+</h3>
+                    <p className="text-gray-400 text-[10px] sm:text-xs font-medium uppercase tracking-wider mt-1">Experts</p>
+                 </div>
+                 
+              </div>
+
             </div>
 
           </div>
